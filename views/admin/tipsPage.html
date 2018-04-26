@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+
+{% if tipsInfo.code %}
+<div class="panel panel-success">
+    <div class="panel-heading">添加分类成功</div>
+    <div class="panel-body">
+        {{tipsInfo.messages}}
+    </div>
+    <div class="panel-footer">
+        <a href="{{tipsInfo.url}}">返回分类管理</a>
+    </div>
+</div>
+{% else %}
+<div class="panel panel-warning">
+    <div class="panel-heading">添加分类失败</div>
+    <div class="panel-body">
+        {{tipsInfo.messages}}
+    </div>
+    <div class="panel-footer">
+        <a href="javascript:window.history.back();">返回修改</a>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

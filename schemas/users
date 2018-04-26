@@ -1,0 +1,13 @@
+let mongoose = require('mongoose');
+let schema = mongoose.Schema;
+
+module.exports = new schema({
+
+    username: String,
+    password: String,
+    isAdmin: {
+        type: Boolean,
+        default: false
+    }
+
+});
